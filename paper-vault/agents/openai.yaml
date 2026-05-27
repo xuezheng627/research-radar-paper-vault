@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Vault"
+  short_description: "Save full-text-read papers into a visual research vault."
+  default_prompt: "Use $paper-vault to add the High and Medium papers from my daily literature digest into a local Paper Vault only after reading the full text or local PDF, with no more than 5 broad categories."

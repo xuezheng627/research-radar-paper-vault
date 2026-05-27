@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paper Vault</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Research Memory</p>
+        <h1>Paper Vault</h1>
+      </div>
+      <div class="stats" id="stats"></div>
+    </header>
+
+    <main class="layout">
+      <section class="top-controls" aria-label="Filters">
+        <section class="panel search-panel">
+          <label class="search-label" for="search">Search</label>
+          <input id="search" class="search" type="search" placeholder="title, method, tag..." />
+        </section>
+
+        <div class="filter-row">
+          <section class="panel top-filter-panel category-panel">
+            <h2>Research Categories</h2>
+            <div id="areaChart" class="area-chart"></div>
+            <div id="areaFilters" class="chart-legend"></div>
+          </section>
+
+          <section class="panel top-filter-panel" id="subtopicPanel">
+            <h2>Primary Subtopics</h2>
+            <div id="subtopicFilters" class="bar-filter-list"></div>
+          </section>
+
+          <section class="panel top-filter-panel priority-panel">
+            <h2>Priority</h2>
+            <div id="priorityFilters" class="filter-list compact"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="content">
+        <section id="groupedPapers" class="groups" aria-live="polite"></section>
+      </section>
+
+      <section class="journal-section panel">
+        <h2>Journal Sources</h2>
+        <div id="journalList" class="journal-list"></div>
+      </section>
+
+      <section class="fulltext-section panel">
+        <h2>Full-Text Queue</h2>
+        <p class="queue-note">
+          High/Medium papers listed here were not imported as normal cards because no full text or local PDF was available yet.
+          Log in through the active browser or provide PDFs, then ask Codex to process the queue.
+        </p>
+        <div id="fulltextInbox" class="fulltext-inbox"></div>
+      </section>
+    </main>
+
+    <template id="paperCardTemplate">
+      <article class="paper-card">
+        <div class="card-head">
+          <div>
+            <p class="meta"></p>
+            <h3></h3>
+          </div>
+          <span class="priority"></span>
+        </div>
+        <p class="area-line"></p>
+        <div class="tag-row"></div>
+        <div class="summary"></div>
+        <button class="detail-toggle" type="button" aria-expanded="false">
+          <span class="toggle-icon">+</span>
+          <span>View details</span>
+        </button>
+        <div class="details-panel" hidden>
+          <dl class="details">
+            <div>
+              <dt>Objective</dt>
+              <dd class="objective"></dd>
+            </div>
+            <div>
+              <dt>Method</dt>
+              <dd class="method"></dd>
+            </div>
+            <div>
+              <dt>Result</dt>
+              <dd class="result"></dd>
+            </div>
+            <div>
+              <dt>Why It Matters</dt>
+              <dd class="usefulness"></dd>
+            </div>
+            <div>
+              <dt>Next Action</dt>
+              <dd class="next"></dd>
+            </div>
+          </dl>
+          <div class="actions"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./data/vault-settings.js"></script>
+    <script src="./data/papers.js"></script>
+    <script src="./data/fulltext-inbox.js"></script>
+    <script src="./data/paper-bilingual.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

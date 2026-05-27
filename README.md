@@ -55,12 +55,7 @@ Send it to me@example.com every day at 09:00.
 Use Chinese.
 My timezone is Europe/London.
 My keywords are:
-- AI in architecture
-- machine learning for building energy
-- reinforcement learning HVAC control
-- large language models for building design
-- building LCA machine learning
-- BIM artificial intelligence
+- 
 ```
 
 Codex should create a personal config file, run a dry run, generate a local Markdown archive, send a test email if Gmail is available, and then create a daily 09:00 automation.
@@ -207,12 +202,7 @@ cp -R ./paper-vault ~/.codex/skills/paper-vault
 语言用中文。
 我的时区是 Europe/London。
 我的关键词是：
-- AI in architecture
-- machine learning for building energy
-- reinforcement learning HVAC control
-- large language models for building design
-- building LCA machine learning
-- BIM artificial intelligence
+- 
 ```
 
 Codex 应该会生成你的个人配置文件，先做一次 dry run，生成本地 Markdown 存档；如果 Gmail 可用，会发送测试邮件；最后创建每天 09:00 的自动化。
